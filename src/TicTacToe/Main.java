@@ -29,19 +29,13 @@ public class Main {
 
             Square s = parseSquares(reader.readLine());
             validTurn = gameboard.takeTurn(s.row, s.col, players[current]);
-            while (!validTurn){
+            while (!validTurn) {
                 Square n = parseSquares(reader.readLine());
                 validTurn = gameboard.takeTurn(n.row, n.col, players[current]);
             }
             gameboard.displayBoard();
             current = (current + 1) % 2;
-            //validTurn = false;
         }
-
-
-
-        //}
-
 
     }
     public static Square parseSquares(String input) {
